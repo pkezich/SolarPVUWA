@@ -1,37 +1,11 @@
-# This file contains 3 functions which are used together to interpolate the hourly temperature values
-# from the daily max and min
-#
-# The function temp_till_9am is used to temperatures for time up to and including 9am. With the function
-# temp_after_9am used for the later times. The main function extracts the mean max and min temperatures from
-# the closest BOM weather station and uses the first to functions to extract the hourly temperatures.
-#
-# temperature_interpolation
-#
-# Inputs: Postcode,MonthDay,Postcode Latitdes and Longitudes (pcode_lats_and_longs),
-# Historical BOM daily temperature parameters (bom_temps), BOM Weather Station Locations (bom_locs)
-# 
-# Outputs: Hourly temperature values of the selected Month/Day combination
-#
 #
 # Simple Cosine function obtained from USAFETAC/PR-91/017, A Method for Estimating Missing Hourly Temperatures Using Daily Maximum and
 # Minimum Temperatures, August 1991, by William R Schaub Jr.
 
-
-temp_till_9am <- function(hour,max,min){
-  
-  # Simple cosine temperature model
-  Thr <-  -(max-min)/2*cos(hour*pi/9) + (max +min)/2
-  
-  return(Thr)
-  
-}
-
-temp_after_9am <-function(hour,max,min){
-  
-  # Simple cosine temperature model  
-  Thr <- (max-min)/2*cos((hour-10)*pi/13) + (max +min)/2
-  
-}
+#' @author Philip Kezich
+#' @name temperature_interpolation
+#' @title temperature_interpolation
+#' @export
 
 
 

@@ -1,3 +1,4 @@
 calculate_postcode_pv	calculate_postcode_pv
 hourly_rad	hourly_rad
-SolarPVUWA	SolarPVUWA-package
+temperature_interpolation	temperature_interpolation
+temp_till_9am	temperature_interpolation

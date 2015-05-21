@@ -1,5 +1,4 @@
 \name{SolarPVUWA}
-\alias{SolarPVUWA}
 \docType{package}
 \title{
 SolarPVUWA
@@ -18,7 +17,13 @@ License: \tab GNU-GPL 3\cr
 This package
 }
 \author{
-Philip Kezich
+Dr. Grant Coble-Neal\cr
+Baopeng Hu\cr
+Philip Kezich\cr
+Melissa Liu\cr
+Joseph John Penipe\cr
+Simon Truong\cr
+Sheng Yang\cr
 
 Maintainer: Philip Kezich <philip.kezich@gmail.com>
 }

@@ -1,4 +1,4 @@
-SolarPVUWA              SolarPVUWA
+                        SolarPVUWA
 calculate_postcode_pv   This script calculated the mean and standard
                         deviation for a month-day combination using the
                         processed values created by the
@@ -9,3 +9,5 @@ calculate_postcode_pv   This script calculated the mean and standard
                         lower bounds of the 90th percentile for
                         irradiation
 hourly_rad              hourly_rad
+temperature_interpolation
+                        temperature_interpolation

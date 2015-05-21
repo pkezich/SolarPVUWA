@@ -8,6 +8,7 @@
 #' @param irradiation_data Data folder for processed irradiation data
 #' @param Postcode Desired Postcode
 #' @param MonthDay Desire Month-Day String
+#' @import R.utils
 #' @export calculate_postcode_pv
 
 calculate_postcode_pv <- function(pv_data,irradiation_data,Postcode,MonthDay){

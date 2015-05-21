@@ -2,3 +2,5 @@
 
 export(calculate_postcode_pv)
 export(hourly_rad)
+export(temp_till_9am)
+import(R.utils)

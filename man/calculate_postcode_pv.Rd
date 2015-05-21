@@ -13,6 +13,10 @@ calculate_postcode_pv(pv_data, irradiation_data, Postcode, MonthDay)
 \item{pv_data}{Data folder for installed PV and geographic data}
 
 \item{irradiation_data}{Data folder for processed irradiation data}
+
+\item{Postcode}{Desired Postcode}
+
+\item{MonthDay}{Desire Month-Day String}
 }
 \description{
 This script calculated the mean and standard deviation for a month-day combination using the processed values
