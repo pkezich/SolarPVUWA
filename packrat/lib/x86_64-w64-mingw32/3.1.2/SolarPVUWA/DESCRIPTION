@@ -1,0 +1,11 @@
+Package: SolarPVUWA
+Type: Package
+Title: Estimates Solar PV output for postcodes in Western Australia
+        using solar irradiance and ambient temperature
+Version: 1.0
+Date: 2015-05-19
+Author: Philip Kezich <philip.kezich@gmail.com>
+Maintainer: Philip Kezich <philip.kezich@gmail.com>
+Description: More about what it does (maybe more than one line)
+License: GNU GPL-3
+Built: R 3.1.2; ; 2015-05-21 12:22:33 UTC; windows

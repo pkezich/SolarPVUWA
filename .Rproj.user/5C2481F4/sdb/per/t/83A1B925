@@ -1,0 +1,16 @@
+{
+    "contents" : "\\name{SolarPVUWA}\n\\alias{SolarPVUWA}\n\\docType{package}\n\\title{\nSolarPVUWA\n}\n\\description{\nGenerates Estimates for Solar PV for Postcode in Western Australia\n}\n\\details{\n\\tabular{ll}{\nPackage: \\tab SolarPVUWA\\cr\nType: \\tab Package\\cr\nVersion: \\tab 1.0\\cr\nDate: \\tab 2015-05-19\\cr\nLicense: \\tab GNU-GPL 3\\cr\n}\nThis package\n}\n\\author{\nPhilip Kezich\n\nMaintainer: Philip Kezich <philip.kezich@gmail.com>\n}\n\\references{\nsolaR Documentation <http://cran.r-project.org/web/packages/solaR/solaR.pdf>\n\nTemperature Interpolation Paper <http://www.dtic.mil/dtic/tr/fulltext/u2/a240394.pdf>\n}\n\\keyword{ Solar PV, Irradiation Estimation, Renewable Energy }\n\\examples{\ncalculate_postcode_pv('C:/Model Data','C:/Processed Data','6000','05-17')\n}\n",
+    "created" : 1432210017831.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "924554112",
+    "id" : "83A1B925",
+    "lastKnownWriteTime" : 1432210510,
+    "path" : "C:/SolarPVUWA/man/SolarPVUWA-package.Rd",
+    "project_path" : "man/SolarPVUWA-package.Rd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
