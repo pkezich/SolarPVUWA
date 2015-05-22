@@ -26,6 +26,11 @@ Source: CRAN
 Version: 2.0.1
 Hash: 9a3ac4e5fd8059af0fc5156bcb019bbc
 
+Package: RColorBrewer
+Source: CRAN
+Version: 1.1-2
+Hash: 5203278413b09be06483c5ac1920bb05
+
 Package: RCurl
 Source: CRAN
 Version: 1.95-4.6
@@ -86,6 +91,12 @@ Source: CRAN
 Version: 0.9.16
 Hash: d96313db22c1ea2028538db1fc96fe5a
 
+Package: latticeExtra
+Source: CRAN
+Version: 0.6-26
+Hash: 2c59a30bb9d9d4651b913b828dca2640
+Requires: RColorBrewer
+
 Package: magrittr
 Source: CRAN
 Version: 1.5
@@ -124,6 +135,12 @@ Version: 1.0.0
 Hash: 9272cc99f9d1623e9717d262bfc2dfb8
 Requires: RCurl, XML
 
+Package: solaR
+Source: CRAN
+Version: 0.41
+Hash: b26121f0bf89a1c7771f7ebc678be6ac
+Requires: RColorBrewer, latticeExtra, zoo
+
 Package: stringi
 Source: CRAN
 Version: 0.4-1
@@ -139,3 +156,8 @@ Package: whisker
 Source: CRAN
 Version: 0.3-2
 Hash: 186ab2937fec1694c8a63009a2389c4e
+
+Package: zoo
+Source: CRAN
+Version: 1.7-12
+Hash: 977920b31482e9fd9cf116d5c600ca55

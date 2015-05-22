@@ -2,7 +2,9 @@
 
 export(calculate_postcode_pv)
 export(hourly_rad)
+export(postcode_pv_output)
 export(temp_after_9am)
 export(temp_till_9am)
 export(temperature_interpolation)
 import(R.utils)
+import(SolaR)

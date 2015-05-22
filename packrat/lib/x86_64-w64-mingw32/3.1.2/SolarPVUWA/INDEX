@@ -1,13 +1,8 @@
                         SolarPVUWA
-calculate_postcode_pv   This script calculated the mean and standard
-                        deviation for a month-day combination using the
-                        processed values created by the
-                        massSolarCruncher script by Grant Coble-Neale.
-                        The script then calculated the outputs of PV
-                        installations in the specified postcode for
-                        cases corresponding to the mean and upper and
-                        lower bounds of the 90th percentile for
-                        irradiation
+calculate_postcode_pv   calculate_postcode_pv
 hourly_rad              hourly_rad
+postcode_pv_output      postcode_pv_output
+temp_after_9am          temp_after_9am
+temp_till_9am           temp_till_9am
 temperature_interpolation
                         temperature_interpolation

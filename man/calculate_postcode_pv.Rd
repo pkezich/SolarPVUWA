@@ -2,10 +2,7 @@
 % Please edit documentation in R/calculate_postcode_pv.R
 \name{calculate_postcode_pv}
 \alias{calculate_postcode_pv}
-\title{This script calculated the mean and standard deviation for a month-day combination using the processed values
-created by the massSolarCruncher script by Grant Coble-Neale. The script then  calculated the outputs of PV
-installations in the specified postcode for cases corresponding to the mean and upper and lower bounds of the 90th
-percentile for irradiation}
+\title{calculate_postcode_pv}
 \usage{
 calculate_postcode_pv(pv_data, irradiation_data, Postcode, MonthDay)
 }
@@ -16,13 +13,16 @@ calculate_postcode_pv(pv_data, irradiation_data, Postcode, MonthDay)
 
 \item{Postcode}{Desired Postcode}
 
-\item{MonthDay}{Desire Month-Day String}
+\item{MonthDay}{Desired Month-Day String}
 }
 \description{
-This script calculated the mean and standard deviation for a month-day combination using the processed values
+This script calculates the mean and standard deviation for a month-day combination using the processed values
 created by the massSolarCruncher script by Grant Coble-Neale. The script then  calculated the outputs of PV
 installations in the specified postcode for cases corresponding to the mean and upper and lower bounds of the 90th
 percentile for irradiation
+}
+\details{
+
 }
 \author{
 Philip Kezich

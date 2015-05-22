@@ -1,15 +1,16 @@
-# This function returns the mean and upper and lower bounds of the total electricity output 
-# for a desired postcode on our selected Month/Day combination. This function relies on the function
-# hourly_rad and uses the temperature output of the temperature_interpolation function as an input
-#
-# Input: Postcode, Desired MonthDay combination, desired data folder, installed PV capacity per postcode
-# & temperature output from the temp_vector function
-#
-# Output: Means and Upper and lower bounds of the 90th percentile for the hourly PV output for our desired
-# Month/Day combination
-#
-#
-#
+#' @title postcode_pv_output
+#' @name postcode_pv_output
+#' @description This function returns the mean and upper and lower bounds of the total electricity output 
+#' for a desired postcode on our selected Month/Day combination. This function relies on the function
+#' hourly_rad and uses the temperature output of the temperature_interpolation function as an input
+#' 
+#' @param Postcode Desired Postcode
+#' @param MonthDay Desired Month/Day combination
+#' @param data.folder Folder containing the processed Irradiation data
+#' @param InstalledPV Data Frame containing the Installed PV values sourced from the
+#' clean energy regulator
+#' @param temp_vector Vector of hourly temperature values for our selected day
+#' @export
 
 
 postcode_pv_output <- function(Postcode, MonthDay,data.folder,InstalledPV,temp_vector){

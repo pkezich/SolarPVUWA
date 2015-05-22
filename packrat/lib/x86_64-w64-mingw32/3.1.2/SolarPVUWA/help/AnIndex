@@ -1,4 +1,6 @@
 calculate_postcode_pv	calculate_postcode_pv
 hourly_rad	hourly_rad
+postcode_pv_output	postcode_pv_output
 temperature_interpolation	temperature_interpolation
-temp_till_9am	temperature_interpolation
+temp_after_9am	temp_after_9am
+temp_till_9am	temp_till_9am

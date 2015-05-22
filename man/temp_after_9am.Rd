@@ -2,11 +2,24 @@
 % Please edit documentation in R/temp_after_9am.R
 \name{temp_after_9am}
 \alias{temp_after_9am}
-\title{}
+\title{temp_after_9am}
 \usage{
 temp_after_9am(hour, max, min)
 }
-\description{
+\arguments{
+\item{hour}{Desired hour of the day (up to and including 9am)}
 
+\item{max}{Maximum daily temperature}
+
+\item{min}{Minimum daily temperature}
+}
+\description{
+The function temp_till_9am is used to temperatures for time up to and including 9am.
+}
+\details{
+
+}
+\author{
+Philip Kezich
 }
 

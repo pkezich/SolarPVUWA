@@ -2,6 +2,13 @@
 # temp_after_9am used for the later times. The main function extracts the mean max and min temperatures from
 # the closest BOM weather station and uses the first to functions to extract the hourly temperatures.
 
+#' 
+#' 
+#' @name temp_till_9am
+#' @title temp_till_9am
+#' @param hour Desired hour of the day (up to and including 9am)
+#' @param max Maximum daily temperature
+#' @param min Minimum daily temperature
 #' @export
 #' 
 

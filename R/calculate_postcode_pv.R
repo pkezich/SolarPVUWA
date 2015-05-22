@@ -1,15 +1,19 @@
-#' This script calculated the mean and standard deviation for a month-day combination using the processed values
+
+#'
+#' @title calculate_postcode_pv
+#' @name calculate_postcode_pv
+#' @description This script calculates the mean and standard deviation for a month-day combination using the processed values
 #' created by the massSolarCruncher script by Grant Coble-Neale. The script then  calculated the outputs of PV
 #' installations in the specified postcode for cases corresponding to the mean and upper and lower bounds of the 90th
 #' percentile for irradiation
-#'
 #' @author Philip Kezich
 #' @param pv_data Data folder for installed PV and geographic data
 #' @param irradiation_data Data folder for processed irradiation data
 #' @param Postcode Desired Postcode
-#' @param MonthDay Desire Month-Day String
+#' @param MonthDay Desired Month-Day String
 #' @import R.utils
-#' @export calculate_postcode_pv
+#' @import SolaR
+#' @export
 
 calculate_postcode_pv <- function(pv_data,irradiation_data,Postcode,MonthDay){
 
