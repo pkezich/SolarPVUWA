@@ -15,14 +15,18 @@ calculate_postcode_pv(pv_data, irradiation_data, Postcode, MonthDay)
 
 \item{MonthDay}{Desired Month-Day String}
 }
+\value{
+The total PV production for the mean and upper and lower bound of daily solar irradiation
+}
 \description{
-This script calculates the mean and standard deviation for a month-day combination using the processed values
-created by the massSolarCruncher script by Grant Coble-Neale. The script then  calculated the outputs of PV
-installations in the specified postcode for cases corresponding to the mean and upper and lower bounds of the 90th
-percentile for irradiation
+This function produces an estimate for the mean and upper and lower bounds of the 90th
+percentile for PV output in a specified postcode usign the solaR model of a small scale PV system
 }
 \details{
 
+}
+\examples{
+calculate_postcode_pv('C:/Model Data/','C:/Processed Data/','6004','06-21')
 }
 \author{
 Philip Kezich

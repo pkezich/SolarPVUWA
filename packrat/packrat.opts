@@ -3,6 +3,6 @@ use.cache: TRUE
 print.banner.on.startup: auto
 vcs.ignore.lib: TRUE
 vcs.ignore.src: FALSE
-external.packages: 
+external.packages: solaR
 local.repos: 
 load.external.packages.on.startup: TRUE

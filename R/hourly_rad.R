@@ -12,9 +12,13 @@ hourly_rad <- function(hour,df1){
     hour<- paste0("0",hour)
   }
   
-  timevec<-df1[which(grepl(paste0(hour,":00:00"),as.character(df1$Time))==1),]    
-  df<-t(timevec$SolarRad)
+  timevec<-df1[which(grepl(paste0(hour,":00:00"),as.character(df1$datetime))==1),]    
+  df<-t(timevec$rad)
   hourly_vector<-suppressWarnings(as.numeric(df))
   
-  return(hourly_vector)
+  
+  means <- mean(hourly_vector)
+  stdev <- sd(hourly_vector)
+  
+  params <- c(means,stdev)
 }

@@ -1,0 +1,16 @@
+{
+    "contents" : "\n#'\n#' @title calculate_postcode_pv\n#' @name calculate_postcode_pv\n#' @description This function produces an estimate for the mean and upper and lower bounds of the 90th\n#' percentile for PV output in a specified postcode usign the solaR model of a small scale PV system\n#' @author Philip Kezich\n#' @param pv_data Data folder for installed PV and geographic data\n#' @param irradiation_data Data folder for processed irradiation data\n#' @param Postcode Desired Postcode\n#' @param MonthDay Desired Month-Day String\n#' @examples\n#' calculate_postcode_pv('C:/Model Data/','C:/Processed Data/','6004','06-21')\n#' @return The total PV production for the mean and upper and lower bounds of daily solar irradiation\n#' @import R.utils\n#' @import solaR\n#' @export\n\ncalculate_postcode_pv <- function(pv_data,irradiation_data,Postcode,MonthDay){\n\n\nload(paste0(pv_data,'LatLongWA.Rdata'))\nload(paste0(pv_data,'InstalledPV.Rdata'))\nload(paste0(pv_data,'BOMDAILYTEMP.Rdata'))\nload(paste0(pv_data,'BOMStatLocs.Rdata'))\n\n\n\n#Calculates hourly temperatures for the selected date. Uses simple cosine model and max and min daily values\ntemperature_vector <- temperature_interpolation(Postcode, MonthDay, LatLongWA,BOMDAILYTEMP,BOMStatLocs)\n\n# Calculates total electricty production for that postcode on that day\ntotal_prod <- postcode_pv_output(Postcode,MonthDay,irradiation_data,InstalledPV,temperature_vector)\n\n\n# Graphing of output\ncolours <- c( \"blue\", \"orange\", \"red\")\nmatplot(t(total_prod), type = c(\"b\"),pch=21,col = colours,xlab=\"Time (Hours)\",ylab=\"PV Output (kW)\",main=\"PV Output\")\n\nreturn(total_prod)\n\n}",
+    "created" : 1432499125585.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3064844378",
+    "id" : "B923B505",
+    "lastKnownWriteTime" : 1432499724,
+    "path" : "C:/SolarPVUWA/R/calculate_postcode_pv.R",
+    "project_path" : "R/calculate_postcode_pv.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
