@@ -1,0 +1,16 @@
+{
+    "contents" : "\n#'\n#' @title calculate_postcode_pv\n#' @name calculate_postcode_pv\n#' @description This function produces an estimate for the mean and upper and lower bounds of the 90th\n#' percentile for PV output in a specified postcode usign the solaR model of a small scale PV system\n#' @author Philip Kezich\n#' @param pv_data Data folder for installed PV and geographic data\n#' @param irradiation_data Data folder for processed irradiation data\n#' @param Postcode Desired Postcode String\n#' @param MonthDay Desired Month-Day String\n#' @examples\n#' calculate_postcode_pv('C:/SolarPVUWA/data/Processed Data/','6004','06-21')\n#' @return The total PV production for the mean and upper and lower bounds of daily solar irradiation, including a graph of the results\n#' @import R.utils\n#' @export\n\n\ndata(sysdata, envir=environment())\n\ncalculate_postcode_pv <- function(irradiation_data,Postcode,MonthDay){\n\n#Calculates hourly temperatures for the selected date. Uses simple cosine model and max and min daily values\ntemperature_vector <- temperature_interpolation(Postcode, MonthDay)\n\n# Calculates total electricty production for that postcode on that day\ntotal_prod <- postcode_pv_output(Postcode,MonthDay,irradiation_data,InstalledPV,temperature_vector)\n\n\n# Graphing of output\ncolours <- c( \"blue\", \"orange\", \"red\")\nmatplot(t(total_prod), type = c(\"b\"),pch=21,col = colours,xlab=\"Time (Hours)\",ylab=\"PV Output (kW)\",main=paste0(\"PV Output for \",Postcode,\" on the \",MonthDay))\n\n}",
+    "created" : 1433166736111.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2947764107",
+    "id" : "80D7C3C2",
+    "lastKnownWriteTime" : 1433316936,
+    "path" : "C:/SolarPVUWA/R/calculate_postcode_pv.R",
+    "project_path" : "R/calculate_postcode_pv.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

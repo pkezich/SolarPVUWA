@@ -18,9 +18,15 @@ clean energy regulator}
 
 \item{temp_vector}{Vector of hourly temperature values for our selected day}
 }
+\value{
+The total PV production for our selected postcode
+}
 \description{
 This function returns the mean and upper and lower bounds of the total electricity output
 for a desired postcode on our selected Month/Day combination. This function relies on the function
 hourly_rad and uses the temperature output of the temperature_interpolation function as an input
+}
+\author{
+Philip Kezich
 }
 

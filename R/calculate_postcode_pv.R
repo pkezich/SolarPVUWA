@@ -7,27 +7,21 @@
 #' @author Philip Kezich
 #' @param pv_data Data folder for installed PV and geographic data
 #' @param irradiation_data Data folder for processed irradiation data
-#' @param Postcode Desired Postcode
+#' @param Postcode Desired Postcode String
 #' @param MonthDay Desired Month-Day String
 #' @examples
-#' calculate_postcode_pv('C:/Model Data/','C:/Processed Data/','6004','06-21')
-#' @return The total PV production for the mean and upper and lower bounds of daily solar irradiation
+#' calculate_postcode_pv('C:/SolarPVUWA/data/Processed Data/','6004','06-21')
+#' @return The total PV production for the mean and upper and lower bounds of daily solar irradiation, including a graph of the results
 #' @import R.utils
-#' @import solaR
 #' @export
 
-calculate_postcode_pv <- function(pv_data,irradiation_data,Postcode,MonthDay){
 
+data(sysdata, envir=environment())
 
-load(paste0(pv_data,'LatLongWA.Rdata'))
-load(paste0(pv_data,'InstalledPV.Rdata'))
-load(paste0(pv_data,'BOMDAILYTEMP.Rdata'))
-load(paste0(pv_data,'BOMStatLocs.Rdata'))
-
-
+calculate_postcode_pv <- function(irradiation_data,Postcode,MonthDay){
 
 #Calculates hourly temperatures for the selected date. Uses simple cosine model and max and min daily values
-temperature_vector <- temperature_interpolation(Postcode, MonthDay, LatLongWA,BOMDAILYTEMP,BOMStatLocs)
+temperature_vector <- temperature_interpolation(Postcode, MonthDay)
 
 # Calculates total electricty production for that postcode on that day
 total_prod <- postcode_pv_output(Postcode,MonthDay,irradiation_data,InstalledPV,temperature_vector)
@@ -35,8 +29,6 @@ total_prod <- postcode_pv_output(Postcode,MonthDay,irradiation_data,InstalledPV,
 
 # Graphing of output
 colours <- c( "blue", "orange", "red")
-matplot(t(total_prod), type = c("b"),pch=21,col = colours,xlab="Time (Hours)",ylab="PV Output (kW)",main="PV Output")
-
-return(total_prod)
+matplot(t(total_prod), type = c("b"),pch=21,col = colours,xlab="Time (Hours)",ylab="PV Output (kW)",main=paste0("PV Output for ",Postcode," on the ",MonthDay))
 
 }

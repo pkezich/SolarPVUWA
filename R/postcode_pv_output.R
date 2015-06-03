@@ -1,15 +1,18 @@
 #' @title postcode_pv_output
 #' @name postcode_pv_output
+#' @author Philip Kezich
 #' @description This function returns the mean and upper and lower bounds of the total electricity output 
 #' for a desired postcode on our selected Month/Day combination. This function relies on the function
 #' hourly_rad and uses the temperature output of the temperature_interpolation function as an input
-#' 
 #' @param Postcode Desired Postcode
 #' @param MonthDay Desired Month/Day combination
 #' @param data.folder Folder containing the processed Irradiation data
 #' @param InstalledPV Data Frame containing the Installed PV values sourced from the
 #' clean energy regulator
 #' @param temp_vector Vector of hourly temperature values for our selected day
+#' @return The total PV production for our selected postcode
+#' @import solaR
+#' @import zoo
 #' @export
 
 
@@ -81,8 +84,7 @@ postcode_pv_output <- function(Postcode, MonthDay,data.folder,InstalledPV,temp_v
   # Calculates Estimate of total PV production for the postcode
   total_prod <- rbind(pv_productivity_min,pv_productivity,pv_productivity_max)
   total_prod[is.na(total_prod)]<-0
+  total_prod[total_prod > installedcap] <-   installedcap
   total_prod <- total_prod * installedcap
-  
-  return(total_prod)
   
 }

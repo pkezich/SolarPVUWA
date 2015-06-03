@@ -1,16 +1,24 @@
-#
-# Simple Cosine function obtained from USAFETAC/PR-91/017, A Method for Estimating Missing Hourly Temperatures Using Daily Maximum and
-# Minimum Temperatures, August 1991, by William R Schaub Jr.
+
 
 #' @author Philip Kezich
 #' @name temperature_interpolation
+#' @description Temperature interpolation function from daily max and min values using historical ambient temperature data supplied by the BOM, together with a Simple Cosine function obtained from USAFETAC/PR-91/017, A Method for Estimating Missing Hourly Temperatures Using Daily Maximum and
+#' Minimum Temperatures
+#' @param Postcode Our desired postcode in string format
+#' @param MonthDay Our desired Month-Day combination in the form 'MM-DD'
+#' @param pcode_lat_longs Our file containing the Latitudes and Longitudes of each postcode in WA (will be LatLongWA in most cases)
+#' @param bom_temps BOM daily temperature data frame containing the max and min daily values
+#' @param bom_locs Location Data for BOM Weather Stations providing the ambient temperature measures
+#' @return Vector containing the interpolated daily temperature values
+#' @examples
+#' temperature_interpolation('6000','04-03',LatLongWA,BOMDAILYTEMP,BOMStatLocs)
 #' @title temperature_interpolation
 #' @export
 
 
 
 
-temperature_interpolation <- function(Postcode,MonthDay,pcode_lats_and_longs,bom_temps,bom_locs){
+temperature_interpolation <- function(Postcode,MonthDay,pcode_lats_and_longs=LatLongWA,bom_temps=BOMDAILYTEMP,bom_locs=BOMStatLocs){
 
 
   # Extract latitude and longitude from our desired postcode

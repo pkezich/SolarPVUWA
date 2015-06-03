@@ -5,5 +5,7 @@ Version: 1.0
 Date: 2015-05-19
 Author: Philip Kezich <philip.kezich@gmail.com>
 Maintainer: Philip Kezich <philip.kezich@gmail.com>
-Description: More about what it does (maybe more than one line)
+Description: This package generates an estimate for the PV output of Western Australian Postcodes by first creating models for irradiation and ambient temperature and then passing them through the model for a solar PV installation obtained from the SolaR package. The central function of the package calculate_postcode_pv() produces a data fram containing the mean and upper and lower bounds of the 90th percentile for PV output. 
 License: GNU GPL-3
+Suggests: knitr
+VignetteBuilder: knitr

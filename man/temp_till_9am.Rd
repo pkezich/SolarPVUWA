@@ -13,7 +13,13 @@ temp_till_9am(hour, max, min)
 
 \item{min}{Minimum daily temperature}
 }
+\value{
+The temperature value corresponding to our selected hour
+}
 \description{
 
+}
+\author{
+Philip Kezich
 }
 

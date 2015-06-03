@@ -4,11 +4,30 @@
 \alias{temperature_interpolation}
 \title{temperature_interpolation}
 \usage{
-temperature_interpolation(Postcode, MonthDay, pcode_lats_and_longs, bom_temps,
-  bom_locs)
+temperature_interpolation(Postcode, MonthDay,
+  pcode_lats_and_longs = LatLongWA, bom_temps = BOMDAILYTEMP,
+  bom_locs = BOMStatLocs)
+}
+\arguments{
+\item{Postcode}{Our desired postcode in string format}
+
+\item{MonthDay}{Our desired Month-Day combination in the form 'MM-DD'}
+
+\item{bom_temps}{BOM daily temperature data frame containing the max and min daily values}
+
+\item{bom_locs}{Location Data for BOM Weather Stations providing the ambient temperature measures}
+
+\item{pcode_lat_longs}{Our file containing the Latitudes and Longitudes of each postcode in WA (will be LatLongWA in most cases)}
+}
+\value{
+Vector containing the interpolated daily temperature values
 }
 \description{
-temperature_interpolation
+Temperature interpolation function from daily max and min values using historical ambient temperature data supplied by the BOM, together with a Simple Cosine function obtained from USAFETAC/PR-91/017, A Method for Estimating Missing Hourly Temperatures Using Daily Maximum and
+Minimum Temperatures
+}
+\examples{
+temperature_interpolation('6000','04-03',LatLongWA,BOMDAILYTEMP,BOMStatLocs)
 }
 \author{
 Philip Kezich

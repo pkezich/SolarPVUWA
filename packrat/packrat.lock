@@ -57,6 +57,12 @@ Source: CRAN
 Version: 1.0-6
 Hash: 9d92cc5ac60123fdb7b0daa3ae83bf99
 
+Package: caTools
+Source: CRAN
+Version: 1.17.1
+Hash: bb5fdc266f716b8a289a4f92007d53e3
+Requires: bitops
+
 Package: devtools
 Source: CRAN
 Version: 1.8.0
@@ -75,10 +81,26 @@ Version: 0.7
 Hash: 96c38894bf65a2e890f7c6ec840a6466
 Requires: stringr
 
+Package: formatR
+Source: CRAN
+Version: 1.2
+Hash: d518b2a342a62e0add8c07403859ff13
+
 Package: git2r
 Source: CRAN
 Version: 0.10.1
 Hash: 6454ce963e12973e157c55838740b1f1
+
+Package: highr
+Source: CRAN
+Version: 0.5
+Hash: d9f29aef93e6fd4f287cec2de07ca468
+
+Package: htmltools
+Source: CRAN
+Version: 0.2.6
+Hash: 2c87108d130de261ac3c468d3316ae42
+Requires: digest
 
 Package: httr
 Source: CRAN
@@ -91,6 +113,12 @@ Source: CRAN
 Version: 0.9.16
 Hash: d96313db22c1ea2028538db1fc96fe5a
 
+Package: knitr
+Source: CRAN
+Version: 1.10.5
+Hash: e2d3a7715a4dfbe69940f054799ce95c
+Requires: digest, evaluate, formatR, highr, markdown, stringr, yaml
+
 Package: latticeExtra
 Source: CRAN
 Version: 0.6-26
@@ -101,6 +129,12 @@ Package: magrittr
 Source: CRAN
 Version: 1.5
 Hash: 38d492cf072bc9f3c73bda2aee3d0e23
+
+Package: markdown
+Source: CRAN
+Version: 0.7.7
+Hash: 3fdcd70d6d9a7067ffa051d143c48f4c
+Requires: mime
 
 Package: memoise
 Source: CRAN
@@ -117,6 +151,12 @@ Package: packrat
 Source: CRAN
 Version: 0.4.3
 Hash: 16c72d5c802629fae5a4abca901e0199
+
+Package: rmarkdown
+Source: CRAN
+Version: 0.6.1
+Hash: 28aee1f631ae3ba9a2858e737f6db66b
+Requires: caTools, htmltools, knitr, yaml
 
 Package: roxygen2
 Source: CRAN
@@ -135,12 +175,6 @@ Version: 1.0.0
 Hash: 9272cc99f9d1623e9717d262bfc2dfb8
 Requires: RCurl, XML
 
-Package: solaR
-Source: CRAN
-Version: 0.41
-Hash: b26121f0bf89a1c7771f7ebc678be6ac
-Requires: RColorBrewer, latticeExtra, zoo
-
 Package: stringi
 Source: CRAN
 Version: 0.4-1
@@ -156,6 +190,11 @@ Package: whisker
 Source: CRAN
 Version: 0.3-2
 Hash: 186ab2937fec1694c8a63009a2389c4e
+
+Package: yaml
+Source: CRAN
+Version: 2.1.13
+Hash: e5d041c001f6d641fd009c1f6ef7d831
 
 Package: zoo
 Source: CRAN

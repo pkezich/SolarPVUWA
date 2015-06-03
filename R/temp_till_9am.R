@@ -6,9 +6,11 @@
 #' 
 #' @name temp_till_9am
 #' @title temp_till_9am
+#' @author Philip Kezich
 #' @param hour Desired hour of the day (up to and including 9am)
 #' @param max Maximum daily temperature
 #' @param min Minimum daily temperature
+#' @return The temperature value corresponding to our selected hour
 #' @export
 #' 
 

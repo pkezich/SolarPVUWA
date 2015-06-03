@@ -7,14 +7,17 @@
 temp_after_9am(hour, max, min)
 }
 \arguments{
-\item{hour}{Desired hour of the day (up to and including 9am)}
+\item{hour}{Desired hour of the day (From 10am to midnight)}
 
 \item{max}{Maximum daily temperature}
 
 \item{min}{Minimum daily temperature}
 }
+\value{
+The temperature value corresponding to our selected hour
+}
 \description{
-The function temp_till_9am is used to temperatures for time up to and including 9am.
+The function temp_till_9am is used to temperatures for times after 9am.
 }
 \details{
 

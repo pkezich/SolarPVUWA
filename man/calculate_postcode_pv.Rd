@@ -3,20 +3,17 @@
 \name{calculate_postcode_pv}
 \alias{calculate_postcode_pv}
 \title{calculate_postcode_pv}
-\usage{
-calculate_postcode_pv(pv_data, irradiation_data, Postcode, MonthDay)
-}
 \arguments{
 \item{pv_data}{Data folder for installed PV and geographic data}
 
 \item{irradiation_data}{Data folder for processed irradiation data}
 
-\item{Postcode}{Desired Postcode}
+\item{Postcode}{Desired Postcode String}
 
 \item{MonthDay}{Desired Month-Day String}
 }
 \value{
-The total PV production for the mean and upper and lower bound of daily solar irradiation
+The total PV production for the mean and upper and lower bounds of daily solar irradiation, including a graph of the results
 }
 \description{
 This function produces an estimate for the mean and upper and lower bounds of the 90th
@@ -26,7 +23,7 @@ percentile for PV output in a specified postcode usign the solaR model of a smal
 
 }
 \examples{
-calculate_postcode_pv('C:/Model Data/','C:/Processed Data/','6004','06-21')
+calculate_postcode_pv('C:/SolarPVUWA/data/Processed Data/','6004','06-21')
 }
 \author{
 Philip Kezich

@@ -14,7 +14,7 @@ Version: \tab 1.0\cr
 Date: \tab 2015-05-19\cr
 License: \tab GNU-GPL 3\cr
 }
-This package
+This package generates an estimate for the PV output of Western Australian Postcodes by first creating models for irradiation and ambient temperature and then passing them through the model for a solar PV installation obtained from the SolaR package. The central function of the package calculate_postcode_pv() produces a data fram containing the mean and upper and lower bounds of the 90th percentile for PV output.
 }
 \author{
 Dr. Grant Coble-Neal\cr

@@ -11,6 +11,9 @@ hourly_rad(hour, df1)
 
 \item{df1}{Data frame filtered to the desired Month-Day combination}
 }
+\value{
+Data frame filtered to contain only the irradiation values for the selected hour
+}
 \description{
 Returns values of the Month/Day combinations which correspond to the desired hour
 }

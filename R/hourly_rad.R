@@ -3,6 +3,7 @@
 #' @description Returns values of the Month/Day combinations which correspond to the desired hour
 #' @param hour Desired hour for which irradiation values are returned
 #' @param df1 Data frame filtered to the desired Month-Day combination
+#' @return Data frame filtered to contain only the irradiation values for the selected hour
 #' @export
 #'
 
